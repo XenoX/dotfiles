@@ -1,0 +1,6 @@
+*
+!.gitignore
+!.config/bspwm/
+!.config/hypr/
+!.config/wallpaper.sh
+!.Xresources
