@@ -2,5 +2,6 @@
 !.gitignore
 !.config/bspwm/
 !.config/hypr/
+!.config/sway/
 !.config/wallpaper.sh
 !.Xresources
