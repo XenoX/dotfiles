@@ -1,12 +1,11 @@
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
 ## Configuration for Alacritty, the GPU enhanced terminal emulator.
 ## It's a very basic and simple config file, for full configuration, Run `man 5 alacritty`
 
 ## GENERAL --------------------------------------------------------
 
 ## Import additional configuration files.
-import = ["~/.config/sway/alacritty/colors.toml", "~/.config/sway/alacritty/fonts.toml"]
+#import = ["~/.config/sway/alacritty/colors.toml", "~/.config/sway/alacritty/fonts.toml"]
+import = ["~/.config/sway/alacritty/catppuccin-macchiato.toml", "~/.config/sway/alacritty/fonts.toml"]
 
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.

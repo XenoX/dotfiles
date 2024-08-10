@@ -1,7 +1,3 @@
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Sway Master configuration file (For Archcraft)
-
 ##-- Mod Keys ----------------------------
 set $mod Mod4
 set $alt Mod1
@@ -26,7 +22,7 @@ focus_follows_mouse yes
 floating_modifier $mod normal
 mouse_warping none
 popup_during_fullscreen smart
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 focus_on_window_activation smart
 show_marks yes
 
@@ -39,93 +35,70 @@ set $screenshot ~/.config/sway/scripts/screenshot
 set $lockscreen ~/.config/sway/scripts/lockscreen
 set $wlogout ~/.config/sway/scripts/wlogout
 set $colorpicker ~/.config/sway/scripts/colorpicker
+set $playerctl playerctl --player=tidal,%any
 set $files thunar
 set $editor vscodium
 set $browser chromium
 
-set $rofi_bluetooth ~/.config/sway/scripts/rofi_bluetooth
-set $rofi_launcher ~/.config/sway/scripts/rofi_launcher
-set $rofi_music ~/.config/sway/scripts/rofi_music
-set $rofi_powermenu ~/.config/sway/scripts/rofi_powermenu
-set $rofi_runner ~/.config/sway/scripts/rofi_runner
 set $rofi_screenshot ~/.config/sway/scripts/rofi_screenshot
-set $rofi_network ~/.config/sway/scripts/rofi_network
-set $rofi_asroot ~/.config/sway/scripts/rofi_asroot
 
 set $wofi_menu ~/.config/sway/scripts/wofi_menu
-set $wofi_powermenu ~/.config/sway/scripts/wofi_powermenu
-
-set $open_in_alacritty alacritty --config-file ~/.config/sway/alacritty/alacritty.toml
 
 ##-- Startup Programs --------------------
 exec_always ~/.config/sway/scripts/startup
-#exec_always ~/.config/sway/scripts/clamshell
+# exec_always ~/.config/sway/scripts/clamshell
 
 ##-- Keybindings -------------------------
 
 # -- Terminal : alacritty --
-bindsym $mod+Return 			exec $alacritty
-bindsym $mod+Shift+Return 		exec $alacritty -f
-bindsym $mod+$alt+Return 		exec $alacritty -F
+bindsym $mod+Return             exec $alacritty
+bindsym $mod+Shift+Return       exec $alacritty -f
+bindsym $mod+$alt+Return        exec $alacritty -F
 
 # -- Terminal :foot --
-#bindsym $mod+Return 			exec $foot
-#bindsym $mod+Shift+Return 		exec $foot -f
-#bindsym $mod+$alt+Return 		exec $foot -s
-#bindsym $mod+t 				exec $foot -F
+# bindsym $mod+Return              exec $foot
+# bindsym $mod+Shift+Return        exec $foot -f
+# bindsym $mod+$alt+Return         exec $foot -s
+# bindsym $mod+t                   exec $foot -F
 
 # -- GUI Apps --
-bindsym $mod+Shift+f 			exec $files
-bindsym $mod+Shift+e 			exec $editor
-bindsym $mod+Shift+w 			exec $browser
-
-# -- CLI Apps --
-bindsym $alt+Control+v 			exec --no-startup-id "$open_in_alacritty -e vim"
-bindsym $alt+Control+r 			exec --no-startup-id "$open_in_alacritty -e ranger"
-bindsym $alt+Control+h 			exec --no-startup-id "$open_in_alacritty -e htop"
+bindsym $mod+Shift+f            exec $files
+bindsym $mod+Shift+e            exec $editor
+bindsym $mod+Shift+w            exec $browser
 
 # -- Rofi --
-bindsym $alt+F1 				exec $rofi_launcher
-bindsym $alt+F2 				exec $rofi_runner
-bindsym $mod+d	 				exec $rofi_launcher
-bindsym $mod+r	 				exec $rofi_asroot
-bindsym $mod+n 					exec $rofi_network
-bindsym $mod+x 					exec $rofi_powermenu
-bindsym $mod+m 					exec $rofi_music
-bindsym $mod+s 					exec $rofi_screenshot
-bindsym $mod+b 					exec $rofi_bluetooth
+bindsym $mod+s                  exec $rofi_screenshot
 
 # -- Wofi --
-#bindsym $alt+F1 				exec $wofi_menu
-#bindsym $mod+d	 				exec $wofi_menu
-#bindsym $mod+x 				exec $wofi_powermenu
+bindsym $alt+F1                 exec $wofi_menu
+bindsym $mod+d                  exec $wofi_menu
 
 # -- Misc --
-bindsym $mod+p 					exec $colorpicker
-#bindsym $mod+n 				exec nm-connection-editor
-#bindsym $mod+x 				exec $wlogout
+bindsym $mod+p                  exec $colorpicker
+bindsym $mod+n                  exec nm-connection-editor
+bindsym $mod+x                  exec $wlogout
 
 # -- Function keys --
-bindsym XF86MonBrightnessUp 	exec "$backlight --inc"
-bindsym XF86MonBrightnessDown 	exec "$backlight --dec"
-bindsym XF86AudioRaiseVolume 	exec "$volume --inc"
-bindsym XF86AudioLowerVolume 	exec "$volume --dec"
-bindsym XF86AudioMute 			exec "$volume --toggle"
-bindsym XF86AudioMicMute 		exec "$volume --toggle-mic"
-bindsym XF86AudioNext 			exec "playerctl --player=tidal,%any next"
-bindsym XF86AudioPrev 			exec "playerctl --player=tidal,%any prev"
-bindsym XF86AudioPlay 			exec "playerctl --player=tidal,%any play-pause"
-bindsym XF86AudioStop 			exec "playerctl --player=tidal,%any stop"
+bindsym XF86MonBrightnessUp     exec "$backlight --inc"
+bindsym XF86MonBrightnessDown   exec "$backlight --dec"
+bindsym XF86AudioRaiseVolume    exec "$volume --inc"
+bindsym XF86AudioLowerVolume    exec "$volume --dec"
+bindsym XF86AudioMute           exec "$volume --toggle"
+bindsym XF86AudioMicMute        exec "$volume --toggle-mic"
+bindsym XF86AudioNext           exec "$playerctl next"
+bindsym XF86AudioPrev           exec "$playerctl prev"
+bindsym XF86AudioPlay           exec "$playerctl play-pause"
+bindsym XF86AudioStop           exec "$playerctl stop"
 
 # -- Screenshots --
-bindsym Print 					exec "$screenshot --now"
-bindsym $alt+Print 				exec "$screenshot --in5"
-bindsym Shift+Print 			exec "$screenshot --in10"
-bindsym Control+Print 			exec "$screenshot --win"
-bindsym $mod+Print 				exec "$screenshot --area"
+bindsym Print                   exec "$screenshot --now"
+bindsym $alt+Print              exec "$screenshot --in5"
+bindsym Shift+Print             exec "$screenshot --in10"
+bindsym Control+Print           exec "$screenshot --win"
+bindsym $mod+Shift+A            exec "$screenshot --area"
 
 # -- Lockscreen --
-bindsym $alt+Control+l 			exec "$lockscreen"
+bindsym $alt+Control+l          exec "$lockscreen"
 
 ## -- Sway --
 
@@ -264,11 +237,11 @@ set $main_monitor "DP-1"
 set $second_monitor "HDMI-A-1"
 set $laptop_monitor "eDP-1"
 
-output $main_monitor pos 0 0 res 2560x1440
+output $main_monitor pos 0 0 res 2560x1440@144Hz
 output $second_monitor pos 2560 0 res 1080x1920 transform 270
 output $laptop_monitor pos 640 1440 res 1920x1080
 
-output * bg ~/.config/sway/wallpapers/wallpaper.jpg fill
+output * bg ~/.config/sway/wallpapers/ram_4.jpg fill
 
 workspace $ws1 output $main_monitor
 workspace $ws2 output $main_monitor

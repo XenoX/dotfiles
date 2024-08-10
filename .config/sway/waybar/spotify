@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Script for spotify for waybar
-
 player_status=$(playerctl status 2> /dev/null)
 
 if [ "$player_status" = "Playing" ]; then
