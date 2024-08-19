@@ -1,7 +1,3 @@
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Font configuration ---------------------------------------
-
 [font]
 ## Font size in points.
 size = 10

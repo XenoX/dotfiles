@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## launch wofi with alt config
-
 CONFIG="$HOME/.config/sway/wofi/config"
 STYLE="$HOME/.config/sway/wofi/style.css"
 

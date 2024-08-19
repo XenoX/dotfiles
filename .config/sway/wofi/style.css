@@ -3,18 +3,11 @@
 */
 
 /** ********** Colors ********** **/
-@define-color background     #1E2128;
-@define-color background-alt #292d37;
-@define-color foreground     #ABB2BF;
-@define-color selected       #E06B74;
-@define-color black          #32363D;
-@define-color red            #E06B74;
-@define-color green          #98C379;
-@define-color yellow         #E5C07A;
-@define-color blue           #62AEEF;
-@define-color magenta        #C778DD;
-@define-color cyan           #55B6C2;
-@define-color white          #ABB2BF;
+@define-color base   #24273a;
+@define-color mantle #1e2030;
+@define-color text   #cad3f5;
+@define-color blue   #8aadf4;
+
 
 /** ********** Fonts ********** **/
 * {
@@ -23,10 +16,10 @@
 }
 
 #window {
-	background-color: @background;
-	color: @foreground;
-	border: 2px solid @background-alt;
-	border-radius: 12px;
+	background-color: @base;
+	color: @text;
+	border: 2px solid @mantle;
+	/* border-radius: 12px; */
 }
 
 #outer-box {
@@ -34,8 +27,7 @@
 }
 
 #input {
-	background-color: @background-alt;
-    border: 0px solid @red;
+	background-color: @mantle;
 	padding: 4px 10px;
 }
 
@@ -51,11 +43,11 @@
 }
 
 #text {
-	color: @foreground;
+	color: @text;
 }
 
 #text:selected {
-	color: @background;
+	color: @base;
 }
 
 #entry {
@@ -63,8 +55,8 @@
 }
 
 #entry:selected {
-	background-image: linear-gradient(to right, @selected , @magenta);
-	color: @background;
+	background-color: @blue;
+	color: @base;
 }
 
 #unselected {
@@ -74,5 +66,5 @@
 }
 
 #input, #entry:selected {
-	border-radius: 30px;
+	/* border-radius: 30px; */
 }

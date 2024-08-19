@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## launch waybar with alt config
+INTERNAL_MONITOR="eDP-1"
+EXTERNAL_MAIN_MONITOR="DP-1"
+EXTERNAL_SECOND_MONITOR="HDMI-A-1"
+
+if [[ $(xrandr -q | grep -e "^${EXTERNAL_MAIN_MONITOR} connected" -e "^${EXTERNAL_SECOND_MONITOR} connected") ]]; then
+	CONFIG="$HOME/.config/sway/waybar/config_multiple"
+else
+	CONFIG="$HOME/.config/sway/waybar/config"
+fi
 
 CONFIG="$HOME/.config/sway/waybar/config"
 STYLE="$HOME/.config/sway/waybar/style.css"

@@ -1,7 +1,3 @@
-/* 
- * Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-*/
-
 /** ********** Import Colors ********** **/
 @import "./colors.css";
 
@@ -13,9 +9,9 @@
 
 /** ********** Waybar Window ********** **/
 window#waybar {
-    background-color: @background;
-	color: @background;
-    border-bottom: 2px solid @background-alt;
+    background-color: @base;
+	color: @base;
+    border-bottom: 2px solid @crust;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -33,87 +29,50 @@ window#waybar.thunar {
 window#waybar.geany {
 }
 
-/** ********** Backlight ********** **/
-#backlight {
-	background-image: linear-gradient(to right, @green , @magenta);
-}
-
-/** ********** Battery ********** **/
-#battery {
-	background-image: linear-gradient(to right, @cyan , @red);
-}
-
-#battery.charging {
-}
-
-#battery.plugged {
-}
-
-@keyframes blink {
-    to {
-        color: @black;
-    }
-}
-
-#battery.critical:not(.charging) {
-	background-color: @red;
-    color: @white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-/** ********** Clock ********** **/
-#clock {
-	background-image: linear-gradient(to right, @red , @blue);
-}
-
 /** ********** Sway ********** **/
 #workspaces {
-	background-color: @background-alt;
-	color: @foreground;
-	border-radius: 0px 12px 0px 0px;
+	background-color: @crust;
+	color: @text;
+	/* border-radius: 0px 12px 0px 0px; */
 	padding: 4px;
 }
 
 #workspaces button {
-	color: @foreground;
+	color: @text;
 	margin: 0px 2px;
 	padding: 2px 6px;
 }
 
 #workspaces button:hover {
-	background-color: @background;
-	color: @white;
-	border: 0px solid @background;
-	border-radius: 12px;
+	background-color: @base;
+	color: @text;
+	border: 0px solid @base;
+	/* border-radius: 12px; */
 	padding: 2px 6px;
 }
 
 #workspaces button.visible {
-	background-image: linear-gradient(to right, @blue , @green);
+	background-color: @teal;
 }
 
 #workspaces button.focused {
-	background-image: linear-gradient(to right, @red , @magenta);
+	background-color: @blue;
 }
 
 #workspaces button.urgent {
-	background-image: linear-gradient(to right, @red , @yellow);
+	background-color: @red;
 }
 
 #workspaces button.persistent {
-	background-image: linear-gradient(to right, @yellow , @magenta);
+	background-color: @yellow;
 }
 
 #workspaces button.visible,
 #workspaces button.focused,
 #workspaces button.urgent,
 #workspaces button.persistent {
-	color: @background;
-	border-radius: 12px;
+	color: @base;
+	/* border-radius: 12px; */
 	padding: 2px 6px;
 }
 
@@ -134,13 +93,13 @@ window#waybar.geany {
 }
 
 #mode {
-	background-color: @magenta;
+	background-color: @mauve;
     font-weight: bold;
 }
 
 #window {
-	background-color: @background-alt;
-	color: @white;
+	background-color: @crust;
+	color: @text;
 }
 window#waybar.empty #window {
 	background-color: transparent;
@@ -148,8 +107,8 @@ window#waybar.empty #window {
 
 /** ********** Tray ********** **/
 #tray {
-	background-color: @background-alt;
-	border-radius: 12px 0px 0px 0px;
+	background-color: @crust;
+	/* border-radius: 12px 0px 0px 0px; */
 	padding: 4px 6px;
 }
 #tray > .passive {
@@ -161,134 +120,81 @@ window#waybar.empty #window {
 #tray > .active {
 }
 
-/** ********** MPD ********** **/
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-#mpd {
-	background-color: @background-alt;
-	color: @white;
-}
-
-#mpd.disconnected {
-	background-color: @red;
-	color: @white;
-}
-
-#mpd.stopped {
-	background-image: linear-gradient(to right, @red , @yellow);
-	color: @background;
-}
-
-#mpd.playing {
-    background: linear-gradient(90deg, @blue 25%, @cyan 50%, @magenta 100%); 
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
-	color: @background;
-}
-
-#mpd.paused {
-}
-
-/** ********** Player ********** **/
+/** ********** Players ********** **/
 #custom-player, #custom-spotify {
-	background-color: @background-alt;
-	color: @white;
+	background-color: @base;
+	color: @base;
 }
 
 #custom-player.paused, #custom-spotify.paused {
-	background-color: @background-alt;
-	color: @white;
+	background-color: @overlay2;
+	color: @crust;
 }
 
 #custom-player.playing, #custom-spotify.playing {
-    background: linear-gradient(90deg, @red 25%, @magenta 50%, @cyan 75%, @blue 100%); 
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+	background-color: @sky;
     font-weight: 900;
-    color: @black;
-}
-
-#custom-player.offline, #custom-spotify.offline {
-	background-color: @red;
-	color: @white;
+    color: @crust;
 }
 
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
-	background-image: linear-gradient(to right, @magenta, @yellow);
-}
-#idle_inhibitor.deactivated {
-	background-image: linear-gradient(to right, @red , @yellow);
-}
-
-/** ********** Pulseaudio ********** **/
-#pulseaudio {
-	background-image: linear-gradient(to right, @blue , @green);
-}
-
-#pulseaudio.bluetooth {
-	background-image: linear-gradient(to right, @green , @yellow);
-}
-#pulseaudio.muted {
-	background-image: linear-gradient(to right, @red , @yellow);
-}
-
-/** ********** Network ********** **/
-#network {
-	background-image: linear-gradient(to right, @magenta , @cyan);
-}
-
-#network.disconnected {
-	background-image: linear-gradient(to right, @red , @yellow);
-}
-#network.disabled {
-	background-image: linear-gradient(to right, @red , @red);
-	color: @white;
-}
-#network.linked {
-}
-#network.ethernet {
-}
-#network.wifi {
+	background-color: @pink;
 }
 
 /** ********** Bluetooth ********** **/
 #bluetooth {
-	background-image: linear-gradient(to right, @yellow , @blue);
+	background-color: @mauve;
 }
-#bluetooth.disabled{
-	background-image: linear-gradient(to right, @red , @red);
-	color: @white;
+
+/** ********** Pulseaudio ********** **/
+#pulseaudio {
+	background-color: @maroon;
 }
-#bluetooth.off{
-	background-image: linear-gradient(to right, @red , @yellow);
+
+/** ********** Backlight ********** **/
+#backlight {
+	background-color: @peach;
 }
-#bluetooth.on{
+
+/** ********** Network ********** **/
+#network {
+	background-color: @yellow;
 }
-#bluetooth.connected{
+
+/** ********** Battery ********** **/
+#battery {
+	background-color: @green;
 }
-#bluetooth.discoverable{
+
+#battery.charging {
 }
-#bluetooth.discovering{
+
+#battery.plugged {
 }
-#bluetooth.pairable{
+
+/* @keyframes blink {
+    to {
+        color: @crust;
+    }
+}
+
+#battery.critical:not(.charging) {
+	background-color: @maroon;
+    color: @text;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} */
+
+/** ********** Clock ********** **/
+#clock {
+	background-color: @lavender;
 }
 
 /** ********** Custom ********** **/
-#custom-themes {
-    background-color: @selected;
-}
 
 /** Common style **/
 #backlight, 
@@ -297,14 +203,13 @@ window#waybar.empty #window {
 #idle_inhibitor,
 #mode,
 #window,
-#mpd,
 #custom-spotify,
 #custom-player,
 #pulseaudio,
 #network,
-#bluetooth,
-#custom-themes {
-	border-radius: 12px;
+#bluetooth
+{
+	/* border-radius: 12px; */
 	margin: 6px 0px;
 	padding: 2px 10px;
 }

@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Autostart Programs
-
 # Kill already running process
 _ps=(waybar mako)
 for _prs in "${_ps[@]}"; do
@@ -16,8 +12,6 @@ done
 if [[ ! `pidof xfce-polkit` ]]; then
 	/usr/lib/xfce-polkit/xfce-polkit &
 fi
-
-~/.config/sway/scripts/xrandr &
 
 # Lauch notification daemon (mako)
 ~/.config/sway/scripts/notifications &
