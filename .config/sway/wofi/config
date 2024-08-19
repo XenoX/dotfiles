@@ -35,7 +35,7 @@ exec_search=false
 hide_search=false
 parse_search=false
 #matching=fuzzy
-insensitive=false
+insensitive=true
 
 ## Other
 hide_scroll=true
