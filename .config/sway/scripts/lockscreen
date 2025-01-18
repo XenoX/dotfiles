@@ -5,12 +5,11 @@ DIR="$HOME/.config/sway"
 
 # CMD
 swaylock --config "$DIR"/swaylock/catppuccin-macchiato.conf \
-	--ignore-empty-password \
-	--show-failed-attempts \
-	--hide-keyboard-layout \
-	--indicator-caps-lock \
-	--image "$DIR"/wallpapers/ram_3.jpg \
-	--font 'JetBrainsMono Nerd Font' --font-size 18 \
-	--indicator-radius 120 \
-	--indicator-thickness 10 \
-
+  --ignore-empty-password \
+  --show-failed-attempts \
+  --hide-keyboard-layout \
+  --indicator-caps-lock \
+  --image "$DIR"/wallpapers/japan.jpg \
+  --font 'JetBrainsMono Nerd Font' --font-size 18 \
+  --indicator-radius 120 \
+  --indicator-thickness 10

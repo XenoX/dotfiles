@@ -1,14 +1,14 @@
 ##-- Style -------------------------------
 default_border pixel 2
 default_floating_border pixel 2
-smart_borders off
+smart_borders on
 
 titlebar_border_thickness 2
 titlebar_padding 6 6
 title_align center
 
-gaps inner 7
-gaps outer 0
+gaps inner 10
+gaps outer 5
 
 ##-- Colors ------------------------------
 # set $sway_cl_col_bg #1E2128
