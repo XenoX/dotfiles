@@ -33,9 +33,14 @@ launch_bar() {
 	# Wait until the processes have been shut down
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-	# Launch the bar
+	# Launch the bar on primary
 	for mon in $(polybar --list-monitors | grep primary | cut -d":" -f1); do
 		MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
+	done
+
+	# Launch the bar on other display
+	for mon in $(polybar --list-monitors | grep -v primary | cut -d":" -f1); do
+		MONITOR=$mon polybar -q main -c "$DIR"/config_alt.ini &
 	done
 }
 

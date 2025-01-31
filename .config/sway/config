@@ -12,7 +12,7 @@ font pango:JetBrains Mono Medium 10
 ##-- Config files ------------------------
 include ~/.config/sway/sway-idle
 include ~/.config/sway/sway-input
-# include ~/.config/sway/sway-output
+include ~/.config/sway/sway-output
 include ~/.config/sway/sway-modes
 include ~/.config/sway/sway-theme
 
@@ -24,7 +24,7 @@ workspace_layout default
 xwayland enable
 focus_follows_mouse yes
 floating_modifier $mod normal
-mouse_warping none
+mouse_warping container
 popup_during_fullscreen smart
 workspace_auto_back_and_forth no
 focus_on_window_activation smart
@@ -208,9 +208,9 @@ bindsym $mod+y border toggle, $send-notify 'Toggled Borders'
 ## Scratchpad
 ##
 ## Make the currently focused window a scratchpad
-bindsym $mod+minus move scratchpad, $send-notify 'Scratchpad'
+bindsym $mod+Shift+minus move scratchpad, $send-notify 'Scratchpad'
 ## Show the first scratchpad window
-bindsym $mod+Shift+minus scratchpad show
+bindsym $mod+minus scratchpad show
 
 #------
 
@@ -236,23 +236,21 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-## monitors
+## Monitors
 set $main_monitor "DP-2"
-#set $second_monitor "HDMI-A-1"
+set $second_monitor "HDMI-A-1"
 set $laptop_monitor "eDP-1"
 
 output $main_monitor pos 0 0 res 3440x1440@120Hz
-# output $second_monitor pos 2560 0 res 1080x1920 transform 270
+#output $second_monitor pos 1721 0 res 1720x1440@60Hz
 output $laptop_monitor pos 3440 900 res 1920x1080
-
-output * bg ~/.config/sway/wallpapers/japan.jpg fill
 
 workspace $ws1 output $main_monitor
 workspace $ws2 output $main_monitor
 workspace $ws3 output $main_monitor
 workspace $ws4 output $laptop_monitor
 workspace $ws5 output $laptop_monitor
-workspace $ws6 output $main_monitor
+workspace $ws6 output $laptop_monitor
 workspace $ws7 output $main_monitor
 workspace $ws8 output $main_monitor
 workspace $ws9 output $main_monitor

@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## launch alacritty with alt config
-
 CONFIG="$HOME/.config/sway/alacritty/alacritty.toml"
 
 if [ "$1" == "-f" ]; then

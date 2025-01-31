@@ -93,7 +93,6 @@ bspc config normal_border_color "$BSPWM_NBC"
 bspc config active_border_color "$BSPWM_ABC"
 bspc config presel_feedback_color "$BSPWM_PFC"
 
-bspc config automatic_scheme longest_side
 bspc config borderless_monocle false
 bspc config gapless_monocle false
 bspc config paddingless_monocle false

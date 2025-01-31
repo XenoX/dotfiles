@@ -4,7 +4,7 @@
 ## You can get a list of output names with: swaymsg -t get_outputs
 
 ## Set wallpaper on all monitors
-output * bg ~/.config/sway/wallpapers/wallpaper.jpg fill
+output * bg ~/.config/sway/wallpapers/wallpaper_7.png fill
 
 ## Set wallpaper on specific monitors
 #output eDP-1    bg ~/.config/sway/wallpapers/wallpaper.jpg fill

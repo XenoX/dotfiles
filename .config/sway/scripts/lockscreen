@@ -9,7 +9,7 @@ swaylock --config "$DIR"/swaylock/catppuccin-macchiato.conf \
   --show-failed-attempts \
   --hide-keyboard-layout \
   --indicator-caps-lock \
-  --image "$DIR"/wallpapers/japan.jpg \
+  --image "$DIR"/wallpapers/wallpaper_6.jpg \
   --font 'JetBrainsMono Nerd Font' --font-size 18 \
   --indicator-radius 120 \
-  --indicator-thickness 10
+  --indicator-thickness 10 #--image "$DIR"/wallpapers/ram_3.jpg \

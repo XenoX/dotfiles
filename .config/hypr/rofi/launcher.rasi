@@ -23,9 +23,9 @@ window {
     location:                    west;
     anchor:                      west;
     fullscreen:                  false;
-    width:                       500px;
-    height:                      96%;
-    x-offset:                    20px;
+    width:                       80%;
+    height:                      80%;
+    x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */

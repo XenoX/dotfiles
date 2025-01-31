@@ -1,10 +1,9 @@
 {
     "include": "~/.config/hypr/waybar/modules",
-    "output": ["eDP-1", "DP-5"],
+    "output": ["eDP-1", "DP-1", "DP-3"],
     "name": "main-bar", 
     "id": "main-bar", 	
-    "layer": "top", 	
-    //"mode": "dock", 	
+    "layer": "top",
     "exclusive": true, 	
     "passthrough": false, 
     "position": "top", 	

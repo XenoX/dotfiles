@@ -3,8 +3,8 @@
 CONFIG="$HOME/.config/sway/wofi/config"
 STYLE="$HOME/.config/sway/wofi/style.css"
 
-if [[ ! `pidof wofi` ]]; then
-	wofi --show drun --prompt 'Apps' --conf ${CONFIG} --style ${STYLE}
+if [[ ! $(pidof wofi) ]]; then
+	wofi --show drun --prompt 'Apps' --conf "${CONFIG}" --style "${STYLE}"
 else
 	pkill wofi
 fi

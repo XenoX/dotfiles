@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-INTERNAL_MONITOR="eDP-1"
-EXTERNAL_MAIN_MONITOR="DP-1"
+EXTERNAL_MAIN_MONITOR="DP-2"
 EXTERNAL_SECOND_MONITOR="HDMI-A-1"
 
 if [[ $(xrandr -q | grep -e "^${EXTERNAL_MAIN_MONITOR} connected" -e "^${EXTERNAL_SECOND_MONITOR} connected") ]]; then
@@ -12,6 +11,6 @@ fi
 
 STYLE="$HOME/.config/sway/waybar/style.css"
 
-if [[ ! `pidof waybar` ]]; then
-	waybar --bar main-bar --log-level error --config ${CONFIG} --style ${STYLE}
+if [[ ! $(pidof waybar) ]]; then
+	waybar --bar main-bar --log-level error --config "${CONFIG}" --style "${STYLE}"
 fi

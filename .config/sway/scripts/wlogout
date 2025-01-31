@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## wlogout with alt layout and style file
-
 LAYOUT="$HOME/.config/sway/wlogout/layout"
 STYLE="$HOME/.config/sway/wlogout/style.css"
 
-if [[ ! `pidof wlogout` ]]; then
-	wlogout --layout ${LAYOUT} --css ${STYLE} \
+if [[ ! $(pidof wlogout) ]]; then
+	wlogout --layout "${LAYOUT}" --css "${STYLE}" \
 		--buttons-per-row 5 \
 		--column-spacing 50 \
 		--row-spacing 50 \
