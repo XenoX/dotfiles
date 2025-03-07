@@ -67,8 +67,8 @@
 		"rotate": 0,
         //"timezone": "America/New_York",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "  {:%I:%M %p}",
-        "format-alt": "  {:%a %b %d, %G}"
+        "format": "  {:%d/%m %H:%M}",
+        "format-alt": "  {:%a %b %d, %G %H:%M}"
     },
 
 	// waybar-idle-inhibitor

@@ -24,9 +24,9 @@ workspace_layout default
 xwayland enable
 focus_follows_mouse yes
 floating_modifier $mod normal
-mouse_warping container
+mouse_warping output
 popup_during_fullscreen smart
-workspace_auto_back_and_forth no
+workspace_auto_back_and_forth yes
 focus_on_window_activation smart
 show_marks yes
 
@@ -243,7 +243,7 @@ set $laptop_monitor "eDP-1"
 
 output $main_monitor pos 0 0 res 3440x1440@120Hz
 #output $second_monitor pos 1721 0 res 1720x1440@60Hz
-output $laptop_monitor pos 3440 900 res 1920x1080
+output $laptop_monitor pos 760 1440 res 1920x1080
 
 workspace $ws1 output $main_monitor
 workspace $ws2 output $main_monitor
