@@ -83,16 +83,16 @@ bindsym $mod+n                  exec nm-connection-editor
 bindsym $mod+x                  exec $wlogout
 
 # -- Function keys --
-bindsym XF86MonBrightnessUp     exec "$backlight --inc"
-bindsym XF86MonBrightnessDown   exec "$backlight --dec"
-bindsym XF86AudioRaiseVolume    exec "$volume --inc"
-bindsym XF86AudioLowerVolume    exec "$volume --dec"
-bindsym XF86AudioMute           exec "$volume --toggle"
-bindsym XF86AudioMicMute        exec "$volume --toggle-mic"
-bindsym XF86AudioNext           exec "$playerctl next"
-bindsym XF86AudioPrev           exec "$playerctl prev"
-bindsym XF86AudioPlay           exec "$playerctl play-pause"
-bindsym XF86AudioStop           exec "$playerctl stop"
+bindsym XF86MonBrightnessUp       exec "$backlight --inc"
+bindsym XF86MonBrightnessDown     exec "$backlight --dec"
+bindsym XF86AudioRaiseVolume      exec "$volume --inc"
+bindsym XF86AudioLowerVolume      exec "$volume --dec"
+bindsym XF86AudioMute             exec "$volume --toggle"
+bindsym XF86AudioMicMute          exec "$volume --toggle-mic"
+bindsym $mod+XF86AudioRaiseVolume exec "$playerctl next"
+bindsym $mod+XF86AudioLowerVolume exec "$playerctl prev"
+bindsym XF86AudioPlay             exec "$playerctl play-pause"
+bindsym XF86AudioStop             exec "$playerctl stop"
 
 # -- Screenshots --
 bindsym Print                   exec "$screenshot --now"
