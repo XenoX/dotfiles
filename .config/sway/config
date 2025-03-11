@@ -26,7 +26,7 @@ focus_follows_mouse yes
 floating_modifier $mod normal
 mouse_warping output
 popup_during_fullscreen smart
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 focus_on_window_activation smart
 show_marks yes
 
@@ -83,16 +83,16 @@ bindsym $mod+n                  exec nm-connection-editor
 bindsym $mod+x                  exec $wlogout
 
 # -- Function keys --
-bindsym XF86MonBrightnessUp     exec "$backlight --inc"
-bindsym XF86MonBrightnessDown   exec "$backlight --dec"
-bindsym XF86AudioRaiseVolume    exec "$volume --inc"
-bindsym XF86AudioLowerVolume    exec "$volume --dec"
-bindsym XF86AudioMute           exec "$volume --toggle"
-bindsym XF86AudioMicMute        exec "$volume --toggle-mic"
-bindsym XF86AudioNext           exec "$playerctl next"
-bindsym XF86AudioPrev           exec "$playerctl prev"
-bindsym XF86AudioPlay           exec "$playerctl play-pause"
-bindsym XF86AudioStop           exec "$playerctl stop"
+bindsym XF86MonBrightnessUp       exec "$backlight --inc"
+bindsym XF86MonBrightnessDown     exec "$backlight --dec"
+bindsym XF86AudioRaiseVolume      exec "$volume --inc"
+bindsym XF86AudioLowerVolume      exec "$volume --dec"
+bindsym XF86AudioMute             exec "$volume --toggle"
+bindsym XF86AudioMicMute          exec "$volume --toggle-mic"
+bindsym $mod+XF86AudioRaiseVolume exec "$playerctl next"
+bindsym $mod+XF86AudioLowerVolume exec "$playerctl previous"
+bindsym XF86AudioPlay             exec "$playerctl play-pause"
+bindsym XF86AudioStop             exec "$playerctl stop"
 
 # -- Screenshots --
 bindsym Print                   exec "$screenshot --now"
