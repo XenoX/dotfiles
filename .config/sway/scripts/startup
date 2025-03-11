@@ -23,7 +23,7 @@ fi
 nm-applet --indicator &
 
 # Eyes saver
-wlsunset -l 50.3590 -L 3.52506 &
+#wlsunset -l 50.3590 -L 3.52506 &
 
 # Start mpd
 exec mpd &
