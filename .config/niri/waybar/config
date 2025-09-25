@@ -1,0 +1,35 @@
+// Copyright (C) 2020-2025 Aditya Shakya <adi1090x@gmail.com>
+//
+// Waybar config file
+{
+    "include": "~/.config/niri/waybar/modules",
+    "name": "main-bar", 			// Waybar name
+    "id": "main-bar", 				// Waybar id
+    //"layer": "top", 				// Waybar at top layer
+    //"mode": "dock", 				// Display mode (dock|hide|invisible|overlay)
+    "exclusive": true, 				// Request an exclusive zone from the compositor
+    "passthrough": false, 			// Pass any pointer events to the window under the bar
+    "position": "top", 				// Waybar position (top|bottom|left|right)
+    "height": 34, 					// Waybar height (to be removed for auto height)
+    "width": "", 					// Waybar width (empty for auto width)
+    "spacing": 0, 					// Gaps between modules
+    "margin": 0, 					// Space around the bar
+    "margin-top": 0, 				// Space above the bar
+    "margin-bottom": 0, 			// Space below the bar
+    "margin-left": 0, 				// Space to the left of the bar
+    "margin-right": 0, 				// Space to the right of the bar
+    "fixed-center": true, 			// Center modules position
+    "ipc": true, 					// Control waybar with `swaymsg bar` commands
+    //-- Type:1
+    "modules-left": [ "custom/menu", "custom/sep", "cpu", "memory", "disk" ],
+    //"modules-center": [ "mpd", "custom/sep", "custom/themes", "idle_inhibitor", "custom/lightmode", "tray" ],
+    "modules-center": [ "custom/spotify", "custom/sep", "tray" ],
+    "modules-right": [ "pulseaudio", "backlight", "bluetooth", "network", "battery", "clock", "custom/sep", "custom/power"],
+
+    //-- Type:2
+    //"modules-left": ["custom/menu", "custom/sep", "niri/workspaces", ],
+    //"modules-left": ["custom/menu", "custom/sep", "niri/window" ],
+    //"modules-left": ["custom/menu", "custom/sep", "mpd" ],
+    //"modules-center": [ "pulseaudio/slider", "custom/sep", "backlight/slider" ],
+    //"modules-right": [ "custom/themes", "idle_inhibitor", "custom/lightmode", "tray", "custom/sep", "bluetooth#2", "network", "battery", "clock", "custom/sep", "custom/power"],
+}

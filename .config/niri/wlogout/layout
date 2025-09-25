@@ -1,0 +1,36 @@
+{
+    "label" : "lock",
+    "text" : "Lock",
+    "action" : "~/.config/niri/wlogout/actions --lock",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "text" : "Logout",
+    "action" : "~/.config/niri/wlogout/actions --logout",
+    "keybind" : "e"
+}
+{
+    "label" : "suspend",
+    "text" : "Suspend",
+    "action" : "~/.config/niri/wlogout/actions --suspend",
+    "keybind" : "u"
+}
+{
+    "label" : "hibernate",
+    "text" : "Hibernate",
+    "action" : "~/.config/niri/wlogout/actions --hibernate",
+    "keybind" : "h"
+}
+{
+    "label" : "reboot",
+    "text" : "Reboot",
+    "action" : "~/.config/niri/wlogout/actions --reboot",
+    "keybind" : "r"
+}
+{
+    "label" : "shutdown",
+    "text" : "Shutdown",
+    "action" : "~/.config/niri/wlogout/actions --shutdown",
+    "keybind" : "s"
+}

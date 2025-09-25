@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2025 Aditya Shakya <adi1090x@gmail.com>
+##
+## Set Wallpaper
+
+WALLPAPER='/home/xenox/.config/niri/wallpapers/wallpaper.jpg'
+
+swaybg --output '*' --mode fill --image "$WALLPAPER"

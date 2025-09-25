@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# niri directory
+DIR="$HOME/.config/niri"
+
+# rofi sudo askpass helper
+export SUDO_ASKPASS="$DIR"/scripts/rofi_askpass
+
+# execute the application
+sudo -E -A $1

@@ -3,3 +3,4 @@
 cp -vr .config/sway ~/.config
 cp -vr .config/bspwm ~/.config
 cp -vr .config/hypr ~/.config
+cp -vr .config/niri ~/.config

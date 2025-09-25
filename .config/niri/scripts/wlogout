@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2025 Aditya Shakya <adi1090x@gmail.com>
+##
+## wlogout with alt layout and style file
+
+LAYOUT="$HOME/.config/niri/wlogout/layout"
+STYLE="$HOME/.config/niri/wlogout/style.css"
+
+if [[ ! `pidof wlogout` ]]; then
+	wlogout --layout ${LAYOUT} --css ${STYLE} \
+		--buttons-per-row 3 \
+		--column-spacing 50 \
+		--row-spacing 50 \
+		--margin-top 225 \
+		--margin-bottom 225 \
+		--margin-left 225 \
+		--margin-right 225
+else
+	pkill wlogout
+fi

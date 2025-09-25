@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+player_status=$(playerctl -a status 2>/dev/null)
+md_cmd="playerctl -a metadata"
+
+if [[ "$player_status" = "Playing" ]]; then
+	echo -e "$($md_cmd artist) - $($md_cmd title)"
+elif [[ "$player_status" = "Paused" ]]; then
+	echo -e "$($md_cmd artist) - $($md_cmd title)"
+else
+	echo -e "󰎊 No Music!"
+fi
