@@ -74,8 +74,8 @@
     "clock": {
 		"interval": 60,
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%I:%M %p}",
-        "format-alt": "  {:%a %b %d, %G}"
+        "format": "  {:%b %d 󰥔 %I:%M %p}",
+        "format-alt": "  {:%a %b %d, %G 󰥔 %I:%M %p}"
     },
 
 	// waybar-cpu
