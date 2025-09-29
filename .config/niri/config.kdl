@@ -20,7 +20,7 @@ input {
         xkb {
             layout     "us"
             variant    "intl"
-            options    "grp:shifts_toggle"
+            options    "grp:shift_toggle"
             //model      ""
             //rules      ""
             //file       "~/.config/keymap.xkb"
@@ -28,7 +28,7 @@ input {
 
         repeat-delay   300
         repeat-rate    30
-        //track-layout   "global"
+        track-layout   "global"
         //numlock
     }
 
