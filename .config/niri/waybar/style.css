@@ -15,7 +15,7 @@
 window#waybar {
     background-color: @background;
 	color: @foreground;
-    border-bottom: 0px solid @background-alt2;
+    border-bottom: 0 solid @background-alt2;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -26,24 +26,24 @@ window#waybar {
 	color: @selected;
 	font-size: 18px;
 	border-radius: 20px;
-	margin: 6px 0px 6px 6px;
+	margin: 6px 0 6px 6px;
 	padding: 2px 12px;
 }
 
 #custom-themes {
     background-color: @selected;
-	margin: 6px 0px 6px 0px;
+	margin: 6px 0 6px 0;
 }
 
 #custom-power {
 	background-color: @red;
 	font-size: 18px;
-	margin: 6px 6px 6px 0px;
+	margin: 6px 6px 6px 0;
 }
 
 #custom-sep {
 	color: @background-alt1;
-	margin: 0px 8px;
+	margin: 0 8px;
 }
 
 #custom-power, #custom-themes {
@@ -54,7 +54,7 @@ window#waybar {
 
 /** ********** Light Mode ********** **/
 #custom-lightmode {
-	margin: 6px 0px 6px 6px ;
+	margin: 6px 0 6px 6px ;
 	border-radius: 20px;
 	padding: 2px 12px;
 }
@@ -72,7 +72,7 @@ window#waybar {
 	background-color: @green;
 	color: @background;
 	border-radius: 20px;
-	margin: 6px 0px 6px 6px ;
+	margin: 6px 0 6px 6px ;
 	padding: 2px 12px;
 }
 #idle_inhibitor.deactivated {
@@ -83,7 +83,6 @@ window#waybar {
 #tray {
 	background-color: @background-alt1;
 	border-radius: 20px;
-	margin: 6px 0px 6px 6px ;
 	padding: 2px 12px;
 }
 #tray > .passive {
@@ -100,7 +99,7 @@ window#waybar {
 #pulseaudio-slider slider {
     min-height: 20px;
     min-width: 20px;
-    border: 0px solid;
+    border: 0 solid;
     background-color: @background-alt2;
 /*  background-image: linear-gradient(@selected, @blue); */
 }
@@ -116,7 +115,7 @@ window#waybar {
 
 #backlight-slider highlight,
 #pulseaudio-slider highlight {
-    min-width: 0px;
+    min-width: 0;
     border-radius: 20px;
     background-image: linear-gradient(90deg, @selected, @blue);
 }
@@ -140,7 +139,7 @@ window#waybar {
 	font-size: 12px;
 	font-weight: bold;
 	border-radius: 20px;
-	margin: 6px 0px;
+	margin: 6px 0;
 	padding: 2px 14px;
 }
 #mpd.disconnected {
@@ -165,7 +164,7 @@ window#waybar {
 	font-size: 12px;
 	font-weight: bold;
 	border-radius: 20px;
-	margin: 6px 0px;
+	margin: 6px 0;
 	padding: 2px 14px;
 }
 
@@ -187,7 +186,7 @@ window#waybar {
 /** ********** C/M/D ********** **/
 #cpu {
 	color: @green;
-	border-radius: 20px 0px 0px 20px;
+	border-radius: 20px 0 0 20px;
 	padding: 2px 14px;
 }
 
@@ -197,13 +196,13 @@ window#waybar {
 
 #disk {
 	color: @blue;
-	border-radius: 0px 20px 20px 0px;
+	border-radius: 0 20px 20px 0;
 	padding: 2px 14px;
 }
 
 #cpu, #memory, #disk {
 	background-color: @background-alt1;
-	margin: 6px 0px ;
+	margin: 6px 0 ;
 }
 
 /** ********** Pulseaudio ********** **/
@@ -220,13 +219,13 @@ window#waybar {
 /** ********** Backlight ********** **/
 #backlight {
 	color: @red;
-	padding: 2px 0px 2px 14px;
+	padding: 2px 0 2px 14px;
 }
 
 /** ********** Battery ********** **/
 #battery {
 	color: @cyan;
-	padding: 2px 0px 2px 14px;
+	padding: 2px 0 2px 14px;
 }
 #battery.charging {
 }
@@ -250,7 +249,7 @@ window#waybar {
 /** ********** Network ********** **/
 #network {
 	color: @yellow;
-	padding: 2px 0px 2px 14px;
+	padding: 2px 0 2px 14px;
 }
 #network.disconnected,#network.disabled {
 	color: @red;
@@ -265,7 +264,7 @@ window#waybar {
 /** ********** Bluetooth ********** **/
 #bluetooth {
 	color: @green;
-	padding: 2px 0px 2px 14px;
+	padding: 2px 0 2px 14px;
 }
 #bluetooth.disabled{
 	color: @red;
@@ -293,7 +292,7 @@ window#waybar {
 #workspaces {
 	background-color: @background-alt1;
 	border-radius: 20px;
-	margin: 6px 0px ;
+	margin: 6px 0 ;
 	padding: 2px 12px;
 }
 #workspaces button{
@@ -313,7 +312,7 @@ window#waybar {
 #window {
 	background-color: @background-alt1;
 	border-radius: 20px;
-	margin: 6px 0px ;
+	margin: 6px 0 ;
 	padding: 2px 14px;
 }
 
@@ -332,16 +331,21 @@ window#waybar.hidden {
 #battery,
 #clock {
 	background-color: @background-alt1;
-	margin: 6px 0px ;
+	margin: 6px 0;
 }
 
 #pulseaudio,
 #bluetooth.2 {
-	border-radius: 20px 0px 0px 20px;
-	padding: 2px 0px 2px 14px;
+	border-radius: 20px 0 0 20px;
+	padding: 2px 0 2px 14px;
 }
 
 #clock {
-	border-radius: 0px 20px 20px 0px;
-	padding: 2px 14px 2px 14px;
+	border-radius: 20px;
+	padding: 2px 14px;
+}
+
+#battery {
+	border-radius: 0 20px 20px 20px;
+	padding: 2px 14px;
 }

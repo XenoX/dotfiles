@@ -20,7 +20,7 @@ input {
         xkb {
             layout     "us"
             variant    "intl"
-            options    "grp:shift_toggle"
+            options    "grp:shifts_toggle"
             //model      ""
             //rules      ""
             //file       "~/.config/keymap.xkb"
@@ -157,8 +157,8 @@ output "eDP-1" {
 //
 // Do not remove '//-AB-CD' comments. These are here for theming scripts.
 layout {
-    gaps 12
-    center-focused-column "never"
+    gaps 14
+    center-focused-column "on-overflow"
     always-center-single-column
     //empty-workspace-above-first
     default-column-display "normal"
@@ -168,13 +168,11 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-        fixed 1366
     }
     preset-window-heights {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-        fixed 768
     }
         
     // ------------------------

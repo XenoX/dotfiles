@@ -21,10 +21,10 @@
     "fixed-center": true, 			// Center modules position
     "ipc": true, 					// Control waybar with `swaymsg bar` commands
     //-- Type:1
-    "modules-left": [ "custom/menu", "custom/sep", "cpu", "memory", "disk" ],
+    "modules-left": [ "custom/menu", "custom/sep", "cpu", "memory", "disk", "custom/sep", "tray" ],
     //"modules-center": [ "mpd", "custom/sep", "custom/themes", "idle_inhibitor", "custom/lightmode", "tray" ],
-    "modules-center": [ "custom/spotify", "custom/sep", "tray" ],
-    "modules-right": [ "pulseaudio", "backlight", "bluetooth", "network", "battery", "clock", "custom/sep", "custom/power"],
+    "modules-center": [ "custom/spotify", "custom/sep", "clock" ],
+    "modules-right": [ "pulseaudio", "backlight", "bluetooth", "network", "battery", "custom/sep", "custom/power"],
 
     //-- Type:2
     //"modules-left": ["custom/menu", "custom/sep", "niri/workspaces", ],
